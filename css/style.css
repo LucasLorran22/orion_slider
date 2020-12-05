@@ -1,0 +1,76 @@
+:root{
+    --preto: #141414;
+    --branco: white;
+}
+
+* { 
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    background-color: var(--preto);
+}
+
+.slider {
+    margin: 0 20% 0 20%;
+    display: block;
+    height: 500px;
+    width: 600px;
+    position: relative;
+}
+
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 500px;
+    width: 800px;
+    vertical-align: top;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: var(--branco);
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+    animation-delay: 5s;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+    animation-delay: 10s;
+}
+
+.slider li:nth-child(4) label {
+    left: 100px;
+    animation-delay: 15s;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
